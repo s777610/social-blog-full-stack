@@ -2,8 +2,8 @@ header {
     font-size: 2rem;
     color: white;
     height: 7rem;
-    background-color: greenyellow;
-    border-bottom: var(--line);
+    background-color: var(--color-primary-dark);
+    
 
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@ header {
 }
 
 .sidebar {
-    background-color: #501d1d;
+    background-color: var(--color-grey-dark-3);
     font-size: 2rem;
     color: white;
     // (1)flex-grow (2)flex-shrink (3)flex bases
@@ -51,5 +51,5 @@ footer {
     font-size: 2rem;
     color: white;
     height: 7rem;
-    background-color: blueviolet;
+    background-color: var(--color-primary-dark);
 }
