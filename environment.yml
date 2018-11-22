@@ -1,0 +1,58 @@
+name: socialblogenv
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - flask-login=0.4.1=py36_0
+  - flask-wtf=0.14.2=py36_1
+  - freetype=2.9.1=hb4e5f40_0
+  - jpeg=9b=he5867d9_2
+  - libcxx=4.0.1=h579ed51_0
+  - libcxxabi=4.0.1=hebd6815_0
+  - libedit=3.1.20170329=hb402a30_2
+  - libffi=3.2.1=h475c297_4
+  - libpng=1.6.34=he12f830_0
+  - libtiff=4.0.9=hcb84e12_2
+  - ncurses=6.1=h0a44026_0
+  - olefile=0.46=py36_0
+  - pillow=5.2.0=py36hb68e598_0
+  - readline=7.0=h1de35cc_5
+  - tk=8.6.8=ha441bb4_0
+  - wtforms=2.2.1=py36_0
+  - xz=5.2.4=h1de35cc_4
+  - zlib=1.2.11=hf3cbc9b_2
+  - alembic=0.9.9=py_0
+  - blinker=1.4=py_1
+  - bzip2=1.0.6=1
+  - click=7.0=py_0
+  - flask=1.0.2=py_2
+  - flask-mail=0.9.1=py_2
+  - flask-migrate=2.2.1=py36_0
+  - flask-sqlalchemy=2.3.2=py_0
+  - itsdangerous=0.24=py_2
+  - jinja2=2.10=py_1
+  - mako=1.0.7=py_1
+  - markupsafe=1.0=py36h470a237_1
+  - pip=18.0=py36_1
+  - python-dateutil=2.7.3=py_0
+  - python-editor=1.0.3=py_0
+  - setuptools=40.4.0=py36_1000
+  - six=1.11.0=py36_1
+  - sqlalchemy=1.2.12=py36h470a237_0
+  - werkzeug=0.14.1=py_0
+  - wheel=0.31.1=py36_1001
+  - astroid=2.0.4=py36_0
+  - ca-certificates=2018.03.07=0
+  - certifi=2018.10.15=py36_0
+  - isort=4.3.4=py36_0
+  - lazy-object-proxy=1.3.1=py36h1de35cc_2
+  - mccabe=0.6.1=py36_1
+  - openssl=1.1.1a=h1de35cc_0
+  - pylint=2.1.1=py36_0
+  - python=3.6.7=haf84260_0
+  - sqlite=3.25.3=ha441bb4_0
+  - typed-ast=1.1.0=py36h1de35cc_0
+  - wrapt=1.10.11=py36h1de35cc_2
+prefix: /anaconda3/envs/socialblogenv
+
