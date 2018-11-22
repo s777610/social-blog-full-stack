@@ -20,6 +20,11 @@ source activate socialblogenv
 ```
 python app.py
 ```
+## Installation of Dev-Tool
+1. install dependencies from package.json
+```
+npm install
+```
 
 
 ## This is a home page, which shows all blog posts.
