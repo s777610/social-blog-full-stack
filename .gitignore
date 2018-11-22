@@ -109,6 +109,10 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# npm 
+node_modules
+
+
 #db
 company_blog/data.sqlite
 
