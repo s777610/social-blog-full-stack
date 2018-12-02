@@ -1,0 +1,41 @@
+.logo-link {
+    height: 100%;
+
+    .logo {
+        float: left;
+        margin-top: 0;
+        margin-left: 0;
+        height: 100%;
+    
+        @media only screen and (max-width: $bp-small) {
+            width: 15rem;
+            height: 7.5rem;
+        }
+    }
+}
+
+.login-box {
+    display: flex;
+    list-style: none;
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        li {
+            padding: 2rem;
+            cursor: pointer;
+
+            @media only screen and (max-width: $bp-small) {
+                padding: .8rem;
+            }
+    
+            &:hover {
+                background-color: #4ebae7;
+            }
+        }
+    }
+
+    
+}
+
