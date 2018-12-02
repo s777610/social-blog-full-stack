@@ -37,10 +37,11 @@ body {
 .header {
   font-size: 2rem;
   height: 7rem;
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary);
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  border-bottom: .2rem solid black; }
   @media only screen and (max-width: 31.25em) {
     .header {
       flex-wrap: wrap;
@@ -53,11 +54,8 @@ body {
       flex-direction: column; } }
 
 .content {
-  display: flex;
-  height: 90vh; }
-  @media only screen and (max-width: 56.25em) {
-    .content {
-      flex-direction: column; } }
+  min-height: 90vh;
+  width: 100%; }
 
 .sidebar {
   background-color: var(--color-grey-dark-3);
@@ -68,11 +66,25 @@ body {
   flex-direction: column;
   justify-content: space-between; }
 
-footer {
-  font-size: 2rem;
+.footer {
+  padding: 2rem 0;
+  position: relative;
+  background-color: var(--color-primary);
   color: white;
-  height: 7rem;
-  background-color: var(--color-primary-dark); }
+  text-align: center;
+  font-size: 1.7rem;
+  border-top: .2rem solid black; }
+  .footer ul.social {
+    padding-bottom: 1rem; }
+    .footer ul.social li {
+      display: inline;
+      font-size: 3rem; }
+      .footer ul.social li a i {
+        color: white;
+        padding: 0 1rem;
+        transition: all .2s; }
+        .footer ul.social li a i:hover {
+          text-shadow: 0 0 .3rem white, 0 0 1.5rem white, 0 0 3rem white; }
 
 .logo-link {
   height: 100%; }
@@ -152,11 +164,153 @@ footer {
         flex-direction: column;
         padding: 1.5rem .5rem; } }
 
-.legal {
-  font-size: 1.2rem;
-  color: var(--color-grey-light-4);
-  text-align: center;
-  padding: 2.5rem; }
-  @media only screen and (max-width: 37.5em) {
-    .legal {
-      display: none; } }
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%; }
+
+.welcome {
+  margin-top: 6rem;
+  color: black;
+  border-bottom: .2rem solid black; }
+  .welcome__title {
+    background-color: var(--color-primary-dark);
+    padding: 2rem;
+    font-size: 5rem;
+    font-weight: 300;
+    box-shadow: 0.1rem 1rem 3rem grey;
+    text-align: center;
+    color: gold; }
+    @media only screen and (max-width: 56.25em) {
+      .welcome__title {
+        padding: 1.5rem;
+        font-size: 3.5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .welcome__title {
+        padding: 1.5rem;
+        font-size: 2.5rem; } }
+  .welcome__text {
+    margin: 3rem 1rem;
+    color: black;
+    font-size: 2rem; }
+
+.posts {
+  margin: 3rem auto;
+  width: 70rem; }
+  @media only screen and (max-width: 56.25em) {
+    .posts {
+      width: 60rem; } }
+  .posts__post {
+    font-size: 2rem;
+    background-color: gainsboro;
+    padding: 1rem;
+    box-shadow: 0.1rem 1rem 3rem grey; }
+    .posts__post__info {
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      align-items: baseline; }
+      @media only screen and (max-width: 37.5em) {
+        .posts__post__info {
+          flex-direction: column; } }
+      .posts__post__info-title {
+        font-size: 3rem;
+        color: black;
+        font-weight: 600; }
+      .posts__post__info a {
+        text-decoration: none; }
+    .posts__post__content {
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      margin-top: 2rem; }
+      @media only screen and (max-width: 37.5em) {
+        .posts__post__content {
+          flex-direction: column; } }
+
+.pages {
+  margin-top: auto;
+  margin-bottom: 3rem; }
+  .pages ul li {
+    display: inline;
+    font-size: 2rem;
+    margin: 0 1rem; }
+
+.account__pic {
+  margin: 3rem auto;
+  width: fit-content; }
+
+.account_info {
+  width: 40rem;
+  margin: 0 auto;
+  font-size: 1.8rem; }
+  .account_info__form {
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .account_info__form__name {
+      display: flex;
+      justify-content: space-between; }
+      .account_info__form__name__cell {
+        margin-left: 1rem;
+        flex: 1; }
+    .account_info__form__email {
+      display: flex;
+      justify-content: space-between; }
+      .account_info__form__email__cell {
+        margin-left: 1rem;
+        flex: 1; }
+    .account_info__form__update {
+      align-self: center; }
+    .account_info__form__btn {
+      font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      border-radius: 100px;
+      border: none;
+      background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+      color: #fff;
+      padding: 1rem;
+      cursor: pointer; }
+
+.create__post {
+  width: fit-content;
+  margin: 3rem auto;
+  height: 30rem; }
+  .create__post__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2rem;
+    width: 50rem;
+    height: 100%; }
+    .create__post__form__title {
+      flex: 1;
+      margin-bottom: 2rem; }
+      .create__post__form__title__form {
+        height: 50%;
+        width: 100%; }
+    .create__post__form__text {
+      flex: 3;
+      margin-bottom: 3rem; }
+      .create__post__form__text__form {
+        height: 80%;
+        width: 100%; }
+    .create__post__form__create {
+      align-self: center;
+      flex: 1; }
+    .create__post__form__btn {
+      font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      border-radius: 100px;
+      border: none;
+      background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+      color: #fff;
+      padding: 1rem;
+      cursor: pointer;
+      transition: all .2s; }
+      .create__post__form__btn:hover {
+        transform: translateY(-2px); }

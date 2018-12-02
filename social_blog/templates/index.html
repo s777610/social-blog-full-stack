@@ -1,42 +1,44 @@
 {% extends "layout.html" %}
 {% block content %}
-  <div class="jumbotron">
-    <h1>Social Company Blog</h1>
-    <p>Welcome to Our Company's Blog Page</p>
+<div class="home">
+  <div class="welcome">
+    <h1 class="welcome__title">Social Company Blog</h1>
+    <p class="welcome__text">Welcome to home page, here are list of posts. Feel free to register and share your posts!</p>
   </div>
 
-  <div class="container">
-
-    {# Go through each blog post #}
-    {% for post in blog_posts.items %}
-
-    <div class="card" >
-
-      <div class="card-body">
-
-
-        <h2><a class="card-title" href="  {{ url_for('blog_posts.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
+  {% for post in blog_posts.items %}
+  <div class="posts">
+    
+    <div class="posts__post">
+      <div class="posts__post__info">
+        <a class="posts__post__info-title" href="  {{ url_for('blog_posts.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a>
         <a href="{{ url_for('users.user_posts', username=post.author.username) }}">Written By: {{ post.author.username }}</a>
         <p>Published on: {{ post.date.strftime('%Y-%m-%d') }}</p>
+      </div>
+      <div class="posts__post__content">
         <p class="card-text">{{ post.text[:100] }}...</p>
         <a href="{{ url_for('blog_posts.blog_post', blog_post_id=post.id) }}" class="btn btn-primary">Read Blog Post</a>
       </div>
     </div>
+  </div>
+  {% endfor %}
+    
 
-   {% endfor %}
-
-   <nav aria-label="Page navigation example">
-     <ul class="pagination justify-content-center">
-       {% for page_num in blog_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
-          {% if blog_posts.page == page_num %}
-          <li class="page-item disabled">
-            <a class="page-link" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
-          {% else %}
-            <li class="page-item"><a class="page-link" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
-          {% endif %}
-      {% endfor %}
-     </ul>
-    </nav>
+    <div class="pages">
+        <ul>
+          {% for page_num in blog_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+            {% if blog_posts.page == page_num %}
+              <li>
+                <a href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
+            {% else %}
+              <li><a href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
     </div>
+  </div>
+    
+  
 {% endblock %}
   

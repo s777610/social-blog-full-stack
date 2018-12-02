@@ -1,11 +1,12 @@
 .header {
     font-size: 2rem;
     height: 7rem;
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: .2rem solid black;
 
     @media only screen and (max-width: $bp-smallest) {
         flex-wrap: wrap;
@@ -26,12 +27,13 @@
 
 
 .content {
-    display: flex;
-    height: 90vh;
+    //display: flex;
+    min-height: 90vh;
+    width: 100%;
 
-    @media only screen and (max-width: $bp-medium) {
-        flex-direction: column;
-    }
+    // @media only screen and (max-width: $bp-medium) {
+    //     flex-direction: column;
+    // }
 }
 
 .sidebar {
@@ -47,10 +49,29 @@
 }
 
 
-
-footer {
-    font-size: 2rem;
+.footer {
+    padding: 2rem 0;
+    position: relative;
+    background-color: var(--color-primary);
     color: white;
-    height: 7rem;
-    background-color: var(--color-primary-dark);
-}
+    text-align: center;
+    font-size: 1.7rem;
+    border-top: .2rem solid black;
+    
+        ul.social {
+        padding-bottom: 1rem;
+        & li {
+            display: inline;
+            font-size: 3rem;
+            & a i {
+            color: white;
+            padding: 0 1rem;
+            transition: all .2s;
+    
+            &:hover {
+                text-shadow: 0 0 .3rem white, 0 0 1.5rem white, 0 0 3rem white;
+            }
+            }  
+        }
+        } 
+    }

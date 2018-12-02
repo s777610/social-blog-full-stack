@@ -1,34 +1,32 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="jumbotron">
-    <div align="center">
+
+    <div class="account__pic">
         <h1>Welcome to the page for {{ current_user.username }}</h1>
-        <img align="center" src="{{ url_for('static', filename='profile_pics/'+current_user.profile_image) }}">
-
+        <img src="{{ url_for('static', filename='profile_pics/'+current_user.profile_image) }}">
     </div>
-</div>
 
-<div class="container">
-    <form method="POST" action="" enctype="multipart/form-data">
+
+<div class="account_info">
+    <form class="account_info__form" method="POST" action="" enctype="multipart/form-data">
         {{form.hidden_tag()}}
-
-      <div class="form-group">
+      <div class="account_info__form__name">
         {{ form.username.label(class='form-group') }}
-        {{ form.username(class='form-control') }}
+        {{ form.username(class='account_info__form__name__cell') }}
       </div>
 
-      <div class="form-group">
+      <div class="account_info__form__email">
       {{ form.email.label(class='form-group') }}
-      {{ form.email(class='form-control') }}
+      {{ form.email(class='account_info__form__email__cell') }}
       </div>
 
-      <div class="form-group">
+      <div class="account_info__form__pic">
       {{ form.picture.label(class='form-group') }}
       {{ form.picture(class='form-control') }}
       </div>
 
-      <div class="form-group">
-       {{ form.submit(class='btn btn-primary') }}
+      <div class="account_info__form__update">
+      {{ form.submit(class='account_info__form__btn') }}
       </div>
 
     </form>

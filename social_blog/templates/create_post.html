@@ -1,19 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-  <div class="container">
-    <form class="form-group" method="POST">
+  <div class="create__post">
+    <form class="create__post__form" method="POST">
       {{ form.hidden_tag() }}
-
-      <div class="form-group">
-        {{ form.title.label(class="form-control-label") }}
-        {{ form.title(class="form-control form-control-lg") }}
+      <div class="create__post__form__title">
+        {{ form.title.label(class="create__post__form__title__label") }}
+        {{ form.title(class="create__post__form__title__form") }}
       </div>
-      <div class="form-group">
-        {{ form.text.label(class="form-control-label") }}
-        {{ form.text(class="form-control form-control-lg") }}
+      <div class="create__post__form__text">
+        {{ form.text.label(class="create__post__form__text__label") }}
+        {{ form.text(class="create__post__form__text__form") }}
       </div>
-      <div class="form-group">
-        {{ form.submit(class="btn btn-outline-info") }}
+      <div class="create__post__form__create">
+        {{ form.submit(class="create__post__form__btn") }}
       </div>
 
     </form>

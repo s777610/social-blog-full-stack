@@ -1,0 +1,60 @@
+.account__pic {
+    margin: 3rem auto;
+    width: fit-content;
+}
+
+.account_info {
+    width: 40rem;
+    margin: 0 auto;
+    font-size: 1.8rem;
+
+    &__form {
+        height: 22rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+
+        &__name {
+            display: flex;
+            justify-content: space-between;
+
+            &__cell {
+                margin-left: 1rem;
+                flex: 1;
+            }
+        }
+
+        &__email {
+            display: flex;
+            justify-content: space-between;
+
+            &__cell {
+                margin-left: 1rem;
+                flex: 1;
+            }
+        }
+
+        &__pic {
+
+        }
+
+        &__update {
+            align-self: center;
+        }
+
+        &__btn {
+            font-size: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            border-radius: 100px;
+            border: none;
+            background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+            color: #fff;
+            padding: 1rem;
+            cursor: pointer;
+        }
+    }
+}
+
+

@@ -5,6 +5,8 @@
       <title>Social &mdash; Blog</title>
       <link rel="shortcut icon" type="image/png" href="../static/image/w.png">
       <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -50,9 +52,7 @@
               {% endif %}
             </ul>
 
-            <div class="legal">
-              &copy; 2018 by Wei-Cheng, Hung. All rights reserved.
-            </div>
+            
       </div>
 
 
@@ -63,9 +63,15 @@
       </div>
     </div>
     
-<footer>
-  Footer
-</footer>
+    <footer class="footer">
+        <ul class="social">
+            <li> <a href="https://www.facebook.com/profile.php?id=100000339745920" target="_blank"> <i class="fa fa-facebook-square"></i></a></li>
+            <li> <a href="https://github.com/s777610" target="_blank"> <i class="fa fa-github"></i></a></li>
+            <li> <a href="https://www.linkedin.com/in/weichenghung/" target="_blank"> <i class="fa fa-linkedin-square"></i>
+            </a></li>
+        </ul>
+        <p> Copyright &copy; Wei Cheng Hung 2018 All Rights Reserved</p>
+    </footer>
 
 
   </body>
