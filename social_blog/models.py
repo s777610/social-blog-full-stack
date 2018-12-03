@@ -20,8 +20,6 @@ def load_user(user_id):
 class User(db.Model, UserMixin):  # UserMixin, logging functionality(our actual model inside templates)
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
-    # data-type is string because it is a link of image,
-    # nullable=False means that can't get rid of their profile image(default for them)
     profile_image = db.Column(db.String(64), nullable=False, default='default_profile.png')
     # index=True means that allows you make the column into index
     email = db.Column(db.String(64), unique=True, index=True)
@@ -61,7 +59,7 @@ class BlogPost(db.Model):
     users = db.relationship(User)
 
     id = db.Column(db.Integer, primary_key=True)
-    # users is tablename of User class, id is its attribute
+    # users is tablename, id is its attribute
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     title = db.Column(db.String(140), nullable=False)

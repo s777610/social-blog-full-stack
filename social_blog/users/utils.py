@@ -25,11 +25,11 @@ def add_profile_pic(pic_upload, username):
     pic.save(filepath)
     return storage_filename  # username.png
 
-def send_reset_email(user):
+def send_reset_email(user): # user obj
     token = user.get_reset_token()
     msg = Message('Password Reset Request',
-                  sender='noreply@demo.com',
-                  recipients=[user.email])  
+                sender='noreply@demo.com',
+                recipients=[user.email])  
 
     # _external=True mean abs URL
     msg.body = f'''To reset your password, visit the following link:

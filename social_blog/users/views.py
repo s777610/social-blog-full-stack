@@ -20,12 +20,10 @@ def register():
         user = User(email=form.email.data,
                     username=form.username.data,
                     password=form.password.data)
-
         db.session.add(user)
         db.session.commit()
         flash('Thanks for registration!')
         return redirect(url_for('users.login'))
-
     return render_template('register.html', form=form)
 
 
@@ -39,11 +37,9 @@ def login():
         if user is not None and user.check_password(form.password.data):
             login_user(user)
             flash('Log in Success!')
-
             # if user was trying to reach other web page which required login,
             # if so, next is that page
             next = request.args.get('next')
-
             # if next == None, just go to home page
             if next == None or not next[0] == '/':
                 next = url_for('core.index')
@@ -60,7 +56,6 @@ def logout():
 @users.route('/account', methods=['GET', 'POST'])
 @login_required
 def account():
-
     form = UpdateUserForm()
     if form.validate_on_submit():
         # this will be activated if form.picture.data has image data
@@ -69,19 +64,16 @@ def account():
             # pic is "username.png"...and so on..
             pic = add_profile_pic(form.picture.data, username)
             current_user.profile_image = pic
-
         current_user.username = form.username.data
         current_user.email = form.email.data
         db.session.commit()
         flash('User Account Updated!')
         return redirect(url_for('users.account'))
-
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.email.data = current_user.email
-
     # rendering template for user's account page
-    profile_image = url_for('static', filename='profile_pics/'+current_user.profile_image)  # this is a pic
+    profile_image = url_for('static', filename='profile_pics/'+current_user.profile_image) 
     return render_template('account.html', profile_image=profile_image, form=form)
 
 
@@ -91,7 +83,6 @@ def user_posts(username):
     page = request.args.get('page', 1, type=int)
     # get user by passing username
     user = User.query.filter_by(username=username).first_or_404()
-
     # User class has posts
     blog_posts = BlogPost.query.filter_by(author=user).order_by(BlogPost.date.desc()).paginate(page=page, per_page=5)
     return render_template('user_blog_posts.html', blog_posts=blog_posts, user=user)
