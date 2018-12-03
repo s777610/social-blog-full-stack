@@ -3,8 +3,10 @@ The back-end of this web-application is built by flask, which is a framework of 
 
 ## Functionality
 1. This social company blog allows users to register and login first.<br>
-2. Then, users are able to create the blog post, update the profile picture, and edit the blog post.<br>
-3. Users can request reset password in case of needs, the confirmation email will be send to users.<br>
+2. Some functionality only available if users are login.<br>
+3. Then, users are able to create the blog post, update the profile picture, and edit the blog post.<br>
+4. Owners can edit or delete their own posts.
+5. Users can request reset password in case of needs, the confirmation email will be send to users.<br>
 
 ## Installation (platform: osx-64)
 1. Create environment
@@ -30,13 +32,17 @@ npm install
 <img width="809" alt="screen shot 2018-08-07 at 3 52 06 pm" src="https://user-images.githubusercontent.com/35472776/49350037-374fba80-f662-11e8-8afb-05d9d19b1eef.png">
 
 
-https://user-images.githubusercontent.com/35472776/49350055-50f10200-f662-11e8-8fb3-7bb8c9bb4460.png
-
-https://user-images.githubusercontent.com/35472776/49350058-54848900-f662-11e8-809f-9c748accdc8e.png
-
+## This is a register page.
+<img width="852" alt="screen shot 2018-08-07 at 3 52 48 pm" src="https://user-images.githubusercontent.com/35472776/49350055-50f10200-f662-11e8-8fb3-7bb8c9bb4460.png">
 
 
-## This is a creating a blog post page, users can create post after registering.
+## This is a login page.
+<img width="852" alt="screen shot 2018-08-07 at 3 52 48 pm" src="https://user-images.githubusercontent.com/35472776/49350058-54848900-f662-11e8-809f-9c748accdc8e.png">
+
+
+
+
+## This is Info page.
 <img width="821" alt="screen shot 2018-08-07 at 3 52 14 pm" src="https://user-images.githubusercontent.com/35472776/49350063-58b0a680-f662-11e8-843d-abe24ca9d11b.png">
 
 
@@ -46,5 +52,5 @@ https://user-images.githubusercontent.com/35472776/49350058-54848900-f662-11e8-8
 
 
 
-## Only the author can delete blog posts. The confirmation message will pop up after clicking the delete button.
+## This is a creating a blog post page, users can create post after registering. Users can delete the posts later on.
 <img width="852" alt="screen shot 2018-08-07 at 3 52 48 pm" src="https://user-images.githubusercontent.com/35472776/49350075-6403d200-f662-11e8-9ead-853ce309d42e.png">
