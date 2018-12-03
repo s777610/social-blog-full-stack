@@ -27,19 +27,24 @@ npm install
 
 
 ## This is a home page, which shows all blog posts.
-<img width="809" alt="screen shot 2018-08-07 at 3 52 06 pm" src="https://user-images.githubusercontent.com/35472776/43806721-0547b038-9a5a-11e8-87d8-1f1b5117f3f7.png">
+<img width="809" alt="screen shot 2018-08-07 at 3 52 06 pm" src="https://user-images.githubusercontent.com/35472776/49350037-374fba80-f662-11e8-8afb-05d9d19b1eef.png">
+
+
+https://user-images.githubusercontent.com/35472776/49350055-50f10200-f662-11e8-8fb3-7bb8c9bb4460.png
+
+https://user-images.githubusercontent.com/35472776/49350058-54848900-f662-11e8-809f-9c748accdc8e.png
 
 
 
 ## This is a creating a blog post page, users can create post after registering.
-<img width="821" alt="screen shot 2018-08-07 at 3 52 14 pm" src="https://user-images.githubusercontent.com/35472776/43806725-08345634-9a5a-11e8-878e-ee9ec3299b36.png">
+<img width="821" alt="screen shot 2018-08-07 at 3 52 14 pm" src="https://user-images.githubusercontent.com/35472776/49350063-58b0a680-f662-11e8-843d-abe24ca9d11b.png">
 
 
 
 ## This is a profile page of users. Users can update profile picture and edit and information.
-<img width="852" alt="screen shot 2018-08-07 at 3 52 23 pm" src="https://user-images.githubusercontent.com/35472776/43806728-0a9b6b74-9a5a-11e8-9c8f-c1852b7bb3f8.png">
+<img width="852" alt="screen shot 2018-08-07 at 3 52 23 pm" src="https://user-images.githubusercontent.com/35472776/49350069-5ea68780-f662-11e8-8e61-a5cdca3325d0.png">
 
 
 
 ## Only the author can delete blog posts. The confirmation message will pop up after clicking the delete button.
-<img width="852" alt="screen shot 2018-08-07 at 3 52 48 pm" src="https://user-images.githubusercontent.com/35472776/43806730-0de70824-9a5a-11e8-9e30-d9d4f621c2fb.png">
+<img width="852" alt="screen shot 2018-08-07 at 3 52 48 pm" src="https://user-images.githubusercontent.com/35472776/49350075-6403d200-f662-11e8-9ead-853ce309d42e.png">
