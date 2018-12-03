@@ -314,3 +314,38 @@ body {
       transition: all .2s; }
       .create__post__form__btn:hover {
         transform: translateY(-2px); }
+
+.login {
+  width: 60%;
+  height: 15rem;
+  margin: 10rem auto;
+  font-size: 2rem; }
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between; }
+    .login__form__cell {
+      display: flex; }
+      .login__form__cell input {
+        flex: 1;
+        margin-left: 1rem; }
+    .login__form__submit {
+      display: flex;
+      justify-content: space-between; }
+      .login__form__submit_btn {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        border-radius: 100px;
+        border: none;
+        background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+        color: #fff;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all .2s; }
+        .login__form__submit_btn:hover {
+          transform: translateY(-2px); }
+
+.register-hight {
+  height: 25rem; }

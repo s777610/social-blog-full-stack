@@ -1,0 +1,52 @@
+.login {
+    width: 60%;
+    height: 15rem;
+    margin: 10rem auto;
+    font-size: 2rem;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+
+        &__cell {
+            display: flex;
+
+            input {
+                flex: 1;
+                margin-left: 1rem;
+            }
+        }
+
+        &__submit {
+            display: flex;
+            justify-content: space-between;
+
+            &_btn {
+                font-size: 2rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                border-radius: 100px;
+                border: none;
+                background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+                color: #fff;
+                padding: 1rem;
+                cursor: pointer;
+                transition: all .2s;
+
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+
+            &_remeber {
+
+            }
+        }
+    }
+}
+
+.register-hight {
+    height: 25rem;
+}

@@ -1,11 +1,24 @@
 {% extends "layout.html" %}
 {% block content %}
-<form method="POST">
-    {{ form.hidden_tag() }}
-    {{ form.email.label }} {{ form.email }}<br>
-    {{ form.username.label }} {{ form.username }}<br>
-    {{ form.password.label }} {{ form.password }}<br>
-    {{ form.pass_confirm.label }} {{ form.pass_confirm }}<br>
-    {{ form.submit() }}
-</form>
+<div class="login  register-hight">
+    <form class="login__form" method="POST">
+        {{ form.hidden_tag() }}
+        <div class="login__form__cell">
+            {{ form.email.label }} {{ form.email }}<br>
+        </div>
+        <div class="login__form__cell">
+            {{ form.username.label }} {{ form.username }}<br>
+        </div>
+        <div class="login__form__cell">
+            {{ form.password.label }} {{ form.password }}<br>
+        </div>
+        <div class="login__form__cell">
+            {{ form.pass_confirm.label }} {{ form.pass_confirm }}<br>
+        </div>
+        <div class="login__form__submit">
+            {{ form.submit(class="login__form__submit_btn") }}
+        </div>
+    </form>
+</div>
+
 {% endblock %}
